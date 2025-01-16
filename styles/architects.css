@@ -24,8 +24,7 @@ h5 {
 }
 /* shared styles */
 section {
-  margin-bottom: 50px;
-  padding: 0 140px;
+  padding: 50px 140px;
 }
 .display-flex {
   display: flex;
@@ -81,12 +80,33 @@ nav ul li a {
 .banner-image img {
   width: 100%;
 }
-
+/* teams section style */
+.teams {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+.teams-image-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+}
+.section-title-description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+#quick-list {
+  font-weight: 600;
+  color: #727272;
+}
 /* media query */
 
 @media screen and (max-width: 576px) {
   section {
-    padding: 0 20px;
+    padding: 50px 20px;
   }
   header {
     flex-direction: column;
@@ -94,13 +114,19 @@ nav ul li a {
     padding: 10px 0;
   }
   .banner {
-    padding: 0 20px;
+    padding: 50px 20px;
+  }
+  .teams {
+    flex-direction: column;
+  }
+  .teams-image-container {
+    grid-template-columns: 1fr;
   }
 }
 /* tablet */
 @media screen and (min-width: 576px) and (max-width: 992px) {
   section {
-    padding: 0 20px;
+    padding: 50px 20px;
   }
   header {
     flex-direction: column;
@@ -109,5 +135,11 @@ nav ul li a {
   }
   .banner {
     padding: 0 20px;
+  }
+  .teams {
+    flex-direction: column;
+  }
+  .teams-image-container {
+    grid-template-columns: 1fr;
   }
 }
